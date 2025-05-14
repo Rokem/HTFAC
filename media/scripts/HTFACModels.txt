@@ -1,0 +1,364 @@
+module HTFAC
+{
+	imports{Base}
+	
+	/*=============================  RESEARCH EQUIPMENT =============================*/
+	
+	model HTFACChemicalWorkstation
+	{
+		mesh = WorldItems/HTFACChemicalWorkstation,
+		texture = WorldItems/HTFACChemicalWorkstation,
+		scale = 1.0,
+	}
+	
+	model HTFACMicroscope
+	{
+		mesh = WorldItems/HTFACMicroscope,
+		texture = WorldItems/HTFACMicroscope,
+		scale = 1.0,
+	}
+	
+	model HTFACCentrifuge
+	{
+		mesh = WorldItems/HTFACCentrifugeOpen,
+		texture = WorldItems/HTFACCentrifuge,
+		scale = 1.0,
+	}
+	
+	/*============================= CHEMISTRY SETS =============================*/
+	
+	model HTFACChemistrySet1
+	{
+		mesh = WorldItems/HTFACChemistrySet,
+		texture = WorldItems/HTFACChemistrySet1,
+		scale = 1.0,
+	}
+	
+	model HTFACChemistrySet2
+	{
+		mesh = WorldItems/HTFACChemistrySet,
+		texture = WorldItems/HTFACChemistrySet2,
+		scale = 1.0,
+	}
+	
+	model HTFACChemistrySet3
+	{
+		mesh = WorldItems/HTFACChemistrySet,
+		texture = WorldItems/HTFACChemistrySet3,
+		scale = 1.0,
+	}
+	
+	/*============================= ITEMS TO CRAFT WORKSTATION =============================*/
+	
+	model HTFACLabBalance
+	{
+		mesh = WorldItems/HTFACLabBalance,
+		texture = WorldItems/HTFACLabBalance,
+		scale = 1.0,
+	}
+	
+	model HTFACChemistryStand
+	{
+		mesh = WorldItems/HTFACChemistryStand,
+		texture = WorldItems/HTFACChemistryStand,
+		scale = 1.0,
+	}
+	
+	model HTFACBunsenBurner
+	{
+		mesh = WorldItems/HTFACBunsenBurner,
+		texture = WorldItems/HTFACBunsenBurner,
+		scale = 1.0,
+	}
+	
+	model HTFACBeakerEmpty
+	{
+		mesh = WorldItems/HTFACBeakerEmpty,
+		texture = WorldItems/HTFACBeakerEmpty,
+		scale = 1.0,
+	}
+	
+	model HTFACConicalFlaskEmpty
+	{
+		mesh = WorldItems/HTFACConicalFlask,
+		texture = WorldItems/HTFACConicalFlaskEmpty,
+		scale = 1.0,
+	}
+	
+	model HTFACBoilingFlaskEmpty
+	{
+		mesh = WorldItems/HTFACBoilingFlask,
+		texture = WorldItems/HTFACBoilingFlaskEmpty,
+		scale = 1.0,
+	}
+	
+	model HTFACGraduatedCylinderEmpty
+	{
+		mesh = WorldItems/HTFACGraduatedCylinder,
+		texture = WorldItems/HTFACGraduatedCylinderEmpty,
+		scale = 1.0,
+	}
+	
+	/*============================= TEST TUBES =============================*/
+	
+	model HTFACTestTubeEmpty
+	{
+		mesh = WorldItems/HTFACTestTube,
+		texture = WorldItems/HTFACTestTubeEmpty,
+		scale = 1.0,
+	}
+	
+	model HTFACTestTubeBlood
+	{
+		mesh = WorldItems/HTFACTestTube,
+		texture = WorldItems/HTFACTestTubeBlood,
+		scale = 1.0,
+	}
+	
+	model HTFACTestTubeBloodExperiment
+	{
+		mesh = WorldItems/HTFACTestTube,
+		texture = WorldItems/HTFACTestTubeBlood,
+		scale = 1.0,
+	}
+	
+	model HTFACTestTubeVirus
+	{
+		mesh = WorldItems/HTFACTestTube,
+		texture = WorldItems/HTFACTestTubeVirus,
+		scale = 1.0,
+	}
+	
+	/*============================= INJECTORS =============================*/
+	
+	model HTFACInjectorEmpty
+	{
+		mesh = WorldItems/HTFACInjectorEmpty,
+		texture = WorldItems/HTFACInjectorUsed,
+		scale = 1.0,
+	}
+
+	model HTFACInjectorUsed
+	{
+		mesh = WorldItems/HTFACInjectorEmpty,
+		texture = WorldItems/HTFACInjectorUsed,
+		scale = 1.0,
+	}
+	
+	model HTFACInjectorSerumWeak
+	{
+		mesh = WorldItems/HTFACInjectorFull,
+		texture = WorldItems/HTFACInjectorSerumWeak,
+		scale = 1.0,
+	}
+
+	model HTFACInjectorSerumStrong
+	{
+		mesh = WorldItems/HTFACInjectorFull,
+		texture = WorldItems/HTFACInjectorSerumStrong,
+		scale = 1.0,
+	}
+	
+	model HTFACInjectorSerumCure
+	{
+		mesh = WorldItems/HTFACInjectorFull,
+		texture = WorldItems/HTFACInjectorSerumCure,
+		scale = 1.0,
+	}
+	
+	/*============================= PACKS =============================*/
+	
+	model HTFACPackInjectors
+	{
+		mesh = WorldItems/HTFACPack,
+		texture = WorldItems/HTFACPackInjectors,
+		scale = 1.0,
+	}
+	
+	model HTFACPackTestTubes
+	{
+		mesh = WorldItems/HTFACPack,
+		texture = WorldItems/HTFACPackTestTubes,
+		scale = 1.0,
+	}
+
+	/*============================= CONSUMABLE =============================*/
+
+	model HTFACPackCottonSwabs
+	{
+		mesh = WorldItems/HTFACPack,
+		texture = WorldItems/HTFACPackCottonSwabs,
+		scale = 1.0,
+	}
+	
+	model HTFACRapidTest
+	{
+		mesh = WorldItems/HTFACRapidTest,
+		texture = WorldItems/HTFACRapidTest,
+		scale = 1.0,
+	}
+	
+	model HTFACChemicals
+	{
+		mesh = WorldItems/HTFACChemicals,
+		texture = WorldItems/HTFACChemicals,
+		scale = 1.2,
+	}
+
+	/*============================= TEST RESULTS =============================*/
+
+	model HTFACTestResultPositive
+	{
+		mesh = WorldItems/HTFACSheetPaper,
+		texture = WorldItems/HTFACTestResultPositive,
+		scale = 0.75,
+	}
+
+	model HTFACTestResultNegative
+	{
+		mesh = WorldItems/HTFACSheetPaper,
+		texture = WorldItems/HTFACTestResultNegative,
+		scale = 0.75,
+	}
+	
+	/*============================= REPORTS =============================*/
+		
+	model HTFACReportMicroscopic
+	{
+		mesh = WorldItems/HTFACSheetPaper,
+		texture = WorldItems/HTFACReportMicroscopic,
+		scale = 0.75,
+	}
+	
+	model HTFACReportChemical
+	{
+		mesh = WorldItems/HTFACSheetPaper,
+		texture = WorldItems/HTFACReportChemical,
+		scale = 0.75,
+	}
+	
+	model HTFACReportBlood
+	{
+		mesh = WorldItems/HTFACSheetPaper,
+		texture = WorldItems/HTFACReportBlood,
+		scale = 0.75,
+	}
+	
+	model HTFACReportAutopsy
+	{
+		mesh = WorldItems/HTFACSheetPaper,
+		texture = WorldItems/HTFACReportAutopsy,
+		scale = 0.75,
+	}
+	
+	/*============================= BREAKTHROUGH =============================*/
+
+	model HTFACReportBreakthrough
+	{
+		mesh = WorldItems/HTFACSheetPaper,
+		texture = WorldItems/HTFACReportBreakthrough,
+		scale = 0.75,
+	}
+	
+	model HTFACReportBreakthroughWeak
+	{
+		mesh = WorldItems/HTFACSheetPaper,
+		texture = WorldItems/HTFACReportBreakthroughWeak,
+		scale = 0.75,
+	}
+	
+	model HTFACReportBreakthroughStrong
+	{
+		mesh = WorldItems/HTFACSheetPaper,
+		texture = WorldItems/HTFACReportBreakthroughStrong,
+		scale = 0.75,
+	}
+	
+	model HTFACReportBreakthroughCure
+	{
+		mesh = WorldItems/HTFACSheetPaper,
+		texture = WorldItems/HTFACReportBreakthroughCure,
+		scale = 0.75,
+	}
+	
+	/*============================= FORMULAS =============================*/
+	
+	model HTFACFormulaWeak
+	{
+		mesh = WorldItems/HTFACNotebook,
+		texture = WorldItems/HTFACFormulaWeak,
+		scale = 0.7,
+	}
+	
+	model HTFACFormulaStrong
+	{
+		mesh = WorldItems/HTFACNotebook,
+		texture = WorldItems/HTFACFormulaStrong,
+		scale = 0.7,
+	}
+	
+	model HTFACFormulaCure
+	{
+		mesh = WorldItems/HTFACNotebook,
+		texture = WorldItems/HTFACFormulaCure,
+		scale = 0.7,
+	}
+	
+	model HTFACFormulaArticle
+	{
+		mesh = WorldItems/HTFACNotebook,
+		texture = WorldItems/HTFACFormulaArticle,
+		scale = 0.7,
+	}
+	
+	/*============================= LITERATURE =============================*/
+	
+	model HTFACLiteratureChemistry101
+	{
+		mesh = WorldItems/HTFACLiterature,
+		texture = WorldItems/HTFACLiteratureChemistry101,
+		scale = 0.4,
+	}
+	
+	model HTFACLiteratureMicrobiology
+	{
+		mesh = WorldItems/HTFACLiterature,
+		texture = WorldItems/HTFACLiteratureMicrobiology,
+		scale = 0.4,
+	}
+	
+	model HTFACLiteratureHematology
+	{
+		mesh = WorldItems/HTFACLiterature,
+		texture = WorldItems/HTFACLiteratureHematology,
+		scale = 0.4,
+	}
+	
+	model HTFACLiteratureCadavers
+	{
+		mesh = WorldItems/HTFACLiterature,
+		texture = WorldItems/HTFACLiteratureCadavers,
+		scale = 0.4,
+	}
+	
+	/*============================= PATIENT/RESEARCH FILES =============================*/
+	
+	model HTFACFilePatient
+	{
+		mesh = WorldItems/HTFACLiterature,
+		texture = WorldItems/HTFACFilePatient,
+		scale = 0.5,
+	}
+	
+	model HTFACFileResearch
+	{
+		mesh = WorldItems/HTFACLiterature,
+		texture = WorldItems/HTFACFileResearch,
+		scale = 0.5,
+	}
+	
+	/*============================= LORE ITEMS =============================*/
+	
+	//To be added.
+	
+}

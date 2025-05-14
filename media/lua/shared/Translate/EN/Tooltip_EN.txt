@@ -1,0 +1,59 @@
+﻿Tooltip_EN = {
+	Tooltip_HTFACChemicalWorkstation="Used for performing chemical analyses to develop a cure and for creating serums.",
+	Tooltip_HTFACMicroscope="Used for performing microscopic analyses to develop a cure.",
+	Tooltip_HTFACCentrifuge="Used for performing blood analyses to develop a cure.",
+	
+	Tooltip_HTFACChemistrySet="Open this chemistry set for an assortment of useful science equipment. How educational!"
+	
+	Tooltip_HTFACLabBalance="Used to create a chemical workstation.",
+	Tooltip_HTFACChemistryStand="Used to create a chemical workstation.",
+	Tooltip_HTFACBunsenBurner="Used to create a chemical workstation.",
+	Tooltip_HTFACBeakerEmpty="Used to create a chemical workstation.",
+	Tooltip_HTFACConicalFlaskEmpty="Used to create a chemical workstation.",
+	Tooltip_HTFACBoilingFlaskEmpty="Used to create a chemical workstation.",
+	Tooltip_HTFACGraduatedCylinderEmpty="Used to create a chemical workstation.",
+	
+	Tooltip_HTFACTestTubeEmpty="An empty test tube useful for taking blood samples.",
+	Tooltip_HTFACTestTubeBlood="A sample of blood which may be used to find a cure.",
+	Tooltip_HTFACTestTubeBloodExperiment="A sample of blood from a test subject infected with the virus.",
+	Tooltip_HTFACTestTubeVirus="A pure sample of the original virus before the outbreak.",
+	
+	Tooltip_HTFACInjectorEmpty="An empty injector useful for creating serums.",
+	Tooltip_HTFACInjectorUsed="It would be the madness to use it again.",
+	Tooltip_HTFACInjectorSerumWeak="A weak serum can reduce the symptoms of the virus.",
+	Tooltip_HTFACInjectorSerumStrong="A strong serumhighly effective against the virus.",
+	Tooltip_HTFACInjectorSerumCure="A permanent cure for the virus.",
+	
+	Tooltip_HTFACPackInjectors="Contains empty injectors.",
+	Tooltip_HTFACPackTestTubes="Contains empty test tubes.",
+	
+	Tooltip_HTFACPackCottonSwabs="Warning: do not stick in your ear canal. Used for creating rapid test kits.",
+	Tooltip_HTFACRapidTest="Used to test whether or not you have been infected with the virus.",
+	Tooltip_HTFACChemicals="A pack of different chemicals used in medicine.",
+	
+	Tooltip_HTFACTestResultPositive="Test result shows the subject is infected with the virus.",
+	Tooltip_HTFACTestResultNegative="Test result shows the subject is not infected with the virus.",
+	
+	Tooltip_HTFACReportMicroscopic="Microscopic observations of infected blood.",
+	Tooltip_HTFACReportChemical="Chemical test results of infected blood.",
+	Tooltip_HTFACReportBlood="Centrifuge test results of infected blood.",
+	Tooltip_HTFACReportAutopsy="A detailed autopsy report of an infected subject.",
+	
+	Tooltip_HTFACReportBreakthrough="This data is key to finding a cure."
+	Tooltip_HTFACReportBreakthroughWeak="Read this to obtain clues on how to create a Weak Serum."
+	Tooltip_HTFACReportBreakthroughStrong="Read this to obtain clues on how to create a Strong Serum."
+	Tooltip_HTFACReportBreakthroughCure="Read this to obtain clues on how to create The Cure."
+	
+	Tooltip_HTFACFormulaWeak="Reading this will unlock the formula for creating a Weak Serum.",
+	Tooltip_HTFACFormulaStrong="Reading this will unlock the formula for creating a Strong Serum.",
+	Tooltip_HTFACFormulaCure="Reading this will unlock the formula for creating The Cure.",
+	Tooltip_HTFACFormulaArticle="No one will take your research seriously if it isn't published. Read this to unluck the ability to copy formula books.",
+		
+	Tooltip_HTFACLiteratureChemistry101="Contains detailed instructions on how to perform chemical analyses and how to assemble a Chemical Workstation.",
+	Tooltip_HTFACLiteratureMicrobiology="Contains detailed instructions on how to perform microscopic analyses and how to create a viral testing kit.",
+	Tooltip_HTFACLiteratureHematology="Contains detailed instructions on how to perform blood analyses.",
+	Tooltip_HTFACLiteratureCadavers="Contains detailed instructions on how to perform an autopsy.",
+	
+	Tooltip_HTFACFilePatient="Open this medical record to obtain valuable medical data which may help you find a cure.",
+	Tooltip_HTFACFileResearch="Open this file to obtain valuable research data on the virus.",
+}

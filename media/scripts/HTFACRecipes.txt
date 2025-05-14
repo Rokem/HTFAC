@@ -1,0 +1,435 @@
+module HTFAC
+{
+	imports{Base}
+	
+	/*============================= ACTIONS =============================*/
+	
+	recipe Test For Infection
+	{
+		Category:Health,
+		HTFAC.HTFACRapidTest,
+		
+		NeedToBeLearn:false,
+		CanBeDoneFromFloor:true,
+		Time:1000.0,
+		
+		Result:HTFAC.HTFACInjectorUsed,
+		OnCreate:HTFACTestForInfection,
+		RemoveResultItem:true,
+	}
+	
+	recipe Inject Yourself
+	{
+		Category:Health,
+		HTFAC.HTFACInjectorSerumWeak/HTFAC.HTFACInjectorSerumStrong/HTFAC.HTFACInjectorSerumCure,
+		
+		NeedToBeLearn:false,
+		CanBeDoneFromFloor:false,
+		Time:15.0,
+		
+		Result:HTFAC.HTFACInjectorUsed,
+		OnCreate:HTFACInjectYourself,
+	}
+
+	/*============================= CRAFTING =============================*/
+	
+	recipe Build Chemical Workstation
+	{
+		Category:Health,
+		HTFAC.HTFACBeakerEmpty=3,
+		HTFAC.HTFACConicalFlaskEmpty=3,
+		HTFAC.HTFACBoilingFlaskEmpty=2,
+		HTFAC.HTFACGraduatedCylinderEmpty=2,
+		HTFAC.HTFACTestTubeEmpty=10,
+		HTFAC.HTFACChemicals=10,
+		HTFAC.HTFACChemistryStand,
+		HTFAC.HTFACBunsenBurner,
+		HTFAC.HTFACLabBalance,
+		
+		NeedToBeLearn:true,
+		CanBeDoneFromFloor:true,
+		Time:2000.0,
+		
+		Result:HTFAC.HTFACChemicalWorkstation,
+	}
+	
+	recipe Create Testing Kit
+	{
+		Category:Health,
+		SheetPaper2,
+		HTFAC.HTFACPackCottonSwabs,
+		HTFAC.HTFACInjectorEmpty,
+		HTFAC.HTFACChemicals,
+		
+		NeedToBeLearn:true,
+		CanBeDoneFromFloor:false,
+		SkillRequired:Doctor=2,
+		Time:500.0,
+		
+		Result:HTFAC.HTFACRapidTest,
+	}
+	
+	recipe Get Sheets of Paper
+	{
+		Category:General,
+		Journal/Notebook,
+		
+		NeedToBeLearn:false,
+		Time:15.0,
+		
+		Result:SheetPaper2=10,
+	}
+	
+	
+	
+	/*============================= OPEN CHEMSET/FILES =============================*/
+	
+	recipe Open Chemistry Set
+	{
+		Category:General,
+		HTFAC.HTFACChemistrySet1/HTFAC.HTFACChemistrySet2/HTFAC.HTFACChemistrySet3,
+		
+		NeedToBeLearn:false,
+		Time:15.0,
+		
+		Result:HTFAC.HTFACChemistrySet1,
+		OnCreate:HTFACOpenChemistrySet,
+		RemoveResultItem:true,
+	}
+	
+	recipe Examine Patient Record
+	{
+		Category:Health,
+		HTFAC.HTFACFilePatient,
+		
+		NeedToBeLearn:false,
+		CanBeDoneFromFloor:false,
+		Time:15.0,
+		
+		Result:HTFAC.HTFACFilePatient,
+		OnCreate:HTFACOpenFilePatient,
+		RemoveResultItem:true,
+	}
+	
+	recipe Examine Research File
+	{
+		Category:Health,
+		HTFAC.HTFACFileResearch,
+		
+		NeedToBeLearn:false,
+		CanBeDoneFromFloor:false,
+		Time:15.0,
+		
+		Result:HTFAC.HTFACFileResearch,
+		OnCreate:HTFACOpenFileResearch,
+		RemoveResultItem:true,
+	}
+	
+	/*============================= RESEARCH ANALYSIS =============================*/
+	
+	recipe Perform Microscopic Analysis
+	{
+		Category:Health,
+		keep HTFAC.HTFACMicroscope,
+		HTFAC.HTFACTestTubeBlood,
+		SheetPaper2,
+		keep Pen/BluePen/RedPen/Pencil,
+		
+		NeedToBeLearn:true,
+		CanBeDoneFromFloor:true,
+		SkillRequired:Doctor=1,
+		Time:250.0,
+		
+		Result:HTFAC.HTFACReportMicroscopic,
+		OnCreate:HTFACAnalysisMicroscopic,
+		RemoveResultItem:true,
+	}
+	
+	recipe Perform Chemical Analysis
+	{
+		Category:Health,
+		keep HTFAC.HTFACChemicalWorkstation,
+		HTFAC.HTFACTestTubeBlood,
+		HTFAC.HTFACChemicals,
+		SheetPaper2,
+		keep Pen/BluePen/RedPen/Pencil,
+		
+		NeedToBeLearn:true,
+		CanBeDoneFromFloor:true,
+		SkillRequired:Doctor=1,
+		Time:250.0,
+		
+		Result:HTFAC.HTFACReportChemical,
+		OnCreate:HTFACAnalysisChemical,
+		RemoveResultItem:true,
+	}
+	
+	recipe Perform Blood Analysis
+	{
+		Category:Health,
+		keep HTFAC.HTFACCentrifuge,
+		HTFAC.HTFACTestTubeBlood,
+		SheetPaper2,
+		keep Pen/BluePen/RedPen/Pencil,
+		
+		NeedToBeLearn:true,
+		CanBeDoneFromFloor:true,
+		SkillRequired:Doctor=2,
+		Time:250.0,
+		
+		
+		Result:HTFAC.HTFACReportBlood,
+		OnCreate:HTFACAnalysisBlood,
+		RemoveResultItem:true,
+	}
+	
+	recipe Perform Autopsy
+	{
+		Category:Health,
+		keep Scalpel,
+		destroy CorpseMale/CorpseFemale,
+		SheetPaper2,
+		keep Pen/BluePen/RedPen/Pencil,
+		
+		NeedToBeLearn:true,
+		CanBeDoneFromFloor:true,
+		SkillRequired:Doctor=3,
+		Time:2500.0,
+		
+		Result:RippedSheets,
+		OnCreate:HTFACAnalysisAutopsy,
+	}
+	
+	/*============================= DISCOVER FORMULAS =============================*/
+	
+	recipe Discover Weak Serum Formula
+	{
+		Category:Health,
+		Journal/Notebook,
+		Pen/BluePen/RedPen/Pencil,
+		
+		HTFAC.HTFACReportMicroscopic=75,
+		HTFAC.HTFACReportChemical=50,
+		HTFAC.HTFACReportBreakthrough=4,
+		
+		NeedToBeLearn:true,
+		CanBeDoneFromFloor:false,
+		SkillRequired:Doctor=4,
+		Time:4000.0,
+		
+		Result:HTFAC.HTFACFormulaWeak,
+	}
+	
+	recipe Discover Strong Serum Formula
+	{
+		Category:Health,
+		keep HTFAC.HTFACFormulaWeak,
+		Journal/Notebook,
+		Pen/BluePen/RedPen/Pencil,
+		
+		HTFAC.HTFACReportMicroscopic=100,
+		HTFAC.HTFACReportChemical=75,
+		HTFAC.HTFACReportBlood=50,
+		HTFAC.HTFACReportAutopsy=25,
+		HTFAC.HTFACReportBreakthrough=10,
+		
+		NeedToBeLearn:true,
+		CanBeDoneFromFloor:false,
+		SkillRequired:Doctor=6,
+		Time:8000.0,
+		
+		Result:HTFAC.HTFACFormulaStrong,
+	}
+	
+	recipe Discover The Cure
+	{
+		Category:Health,
+		keep HTFAC.HTFACFormulaWeak,
+		keep HTFAC.HTFACFormulaStrong,
+		Journal/Notebook,
+		Pen/BluePen/RedPen/Pencil,
+		
+		HTFAC.HTFACReportMicroscopic=150,
+		HTFAC.HTFACReportChemical=125,
+		HTFAC.HTFACReportBlood=100,
+		HTFAC.HTFACReportAutopsy=75,
+		HTFAC.HTFACReportBreakthrough=20,
+		
+		NeedToBeLearn:true,
+		CanBeDoneFromFloor:false,
+		SkillRequired:Doctor=8,
+		Time:12000.0,
+		
+		Result:HTFAC.HTFACFormulaCure,
+	}
+	
+	recipe Write Article for Publication
+	{
+		Category:Health,
+		keep HTFAC.HTFACFormulaWeak,
+		keep HTFAC.HTFACFormulaStrong,
+		keep HTFAC.HTFACFormulaCure,
+		Journal/Notebook,
+		Pen/BluePen/RedPen/Pencil,
+		
+		HTFAC.HTFACReportMicroscopic=300,
+		HTFAC.HTFACReportChemical=300,
+		HTFAC.HTFACReportBlood=300,
+		HTFAC.HTFACReportAutopsy=300,
+		HTFAC.HTFACReportBreakthrough=100,
+		
+		NeedToBeLearn:true,
+		CanBeDoneFromFloor:false,
+		SkillRequired:Doctor=10,
+		Time:16000.0,
+		
+		Result:HTFAC.HTFACFormulaArticle,
+	}
+	
+	/*============================= COPY FORMULAS =============================*/
+	
+	recipe Copy Weak Serum Formula
+	{
+		Category:Health,
+		keep HTFAC.HTFACFormulaWeak/HTFAC.HTFACFormulaArticle,
+		Journal/Notebook,
+		Pen/BluePen/RedPen/Pencil,
+		
+		NeedToBeLearn:true,
+		CanBeDoneFromFloor:false,
+		SkillRequired:Doctor=4,
+		Time:4000.0,
+		
+		Result:HTFAC.HTFACFormulaWeak,
+	}
+	
+	recipe Copy Strong Serum Formula
+	{
+		Category:Health,
+		keep HTFAC.HTFACFormulaStrong/HTFAC.HTFACFormulaArticle,
+		Journal/Notebook,
+		Pen/BluePen/RedPen/Pencil,
+		
+		NeedToBeLearn:true,
+		CanBeDoneFromFloor:false,
+		SkillRequired:Doctor=6,
+		Time:8000.0,
+		
+		Result:HTFAC.HTFACFormulaStrong,
+	}
+	
+	recipe Copy Cure Formula
+	{
+		Category:Health,
+		keep HTFAC.HTFACFormulaCure/HTFAC.HTFACFormulaArticle,
+		Journal/Notebook,
+		Pen/BluePen/RedPen/Pencil,
+		
+		NeedToBeLearn:true,
+		CanBeDoneFromFloor:false,
+		SkillRequired:Doctor=8,
+		Time:12000.0,
+		
+		Result:HTFAC.HTFACFormulaCure,
+	}
+	
+	/*============================= CREATE SERUMS =============================*/
+	
+	recipe Create Weak Serum
+	{
+		Category:Health,
+		keep HTFAC.HTFACFormulaWeak/HTFAC.HTFACFormulaArticle,
+		keep HTFAC.HTFACChemicalWorkstation,
+		HTFAC.HTFACInjectorEmpty,
+		HTFAC.HTFACChemicals,
+		HTFAC.HTFACTestTubeBlood=10,
+		
+		NeedToBeLearn:true,
+		CanBeDoneFromFloor:true,
+		SkillRequired:Doctor=1,
+		Time:750.0,
+		
+		Result:HTFAC.HTFACInjectorSerumWeak,
+	}
+
+	recipe Create Strong Serum
+	{
+		Category:Health,
+		keep HTFAC.HTFACFormulaStrong/HTFAC.HTFACFormulaArticle,
+		keep HTFAC.HTFACChemicalWorkstation,
+		HTFAC.HTFACInjectorEmpty,
+		HTFAC.HTFACChemicals,
+		HTFAC.HTFACTestTubeBlood=20,
+		
+		NeedToBeLearn:true,
+		CanBeDoneFromFloor:true,
+		SkillRequired:Doctor=2,
+		Time:1000.0,
+		
+		Result:HTFAC.HTFACInjectorSerumStrong,
+	}
+
+	recipe Create The Cure
+	{
+		Category:Health,
+		keep HTFAC.HTFACFormulaCure/HTFAC.HTFACFormulaArticle,
+		keep HTFAC.HTFACChemicalWorkstation,
+		HTFAC.HTFACInjectorEmpty,
+		HTFAC.HTFACChemicals,
+		HTFAC.HTFACTestTubeBlood=30,
+		
+		NeedToBeLearn:true,
+		CanBeDoneFromFloor:true,
+		SkillRequired:Doctor=3,
+		Time:1250.0,
+		
+		Result:HTFAC.HTFACInjectorSerumCure,
+	}
+	
+	/*============================= PACK / UNPACK =============================*/
+	
+	recipe Unpack Empty Injectors
+	{
+		Category:Health,
+		HTFAC.HTFACPackInjectors,
+		
+		NeedToBeLearn:false,
+		Time:10.0,
+		
+		Result:HTFAC.HTFACInjectorEmpty=10,
+	}
+
+	recipe Pack Empty Injectors
+	{
+		Category:Health,
+		HTFAC.HTFACInjectorEmpty=10,
+		
+		NeedToBeLearn:false,
+		Time:10.0,
+		
+		Result:HTFAC.HTFACPackInjectors,
+	}
+
+	recipe Unpack Test Tubes
+	{
+		Category:Health,
+		HTFAC.HTFACPackTestTubes,
+		
+		NeedToBeLearn:false,
+		Time:10.0,
+		
+		Result:HTFAC.HTFACTestTubeEmpty=50,
+	}
+
+	recipe Pack Test Tubes
+	{
+		Category:Health,
+		HTFAC.HTFACTestTubeEmpty=50,
+		
+		NeedToBeLearn:false,
+		Time:10.0,
+		
+		Result:HTFAC.HTFACPackTestTubes,
+	}
+	
+}

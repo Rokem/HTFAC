@@ -1,0 +1,554 @@
+module HTFAC
+{
+	imports{Base}
+	
+	/*============================= RESEARCH EQUIPMENT =============================*/
+	
+	item HTFACChemicalWorkstation
+	{
+		DisplayName = HTFACChemicalWorkstation,
+		Icon = HTFACChemicalWorkstation,
+		WorldStaticModel = HTFAC.HTFACChemicalWorkstation,
+		Tooltip = Tooltip_HTFACChemicalWorkstation,
+		DisplayCategory = FirstAid,
+		Weight = 15.0,
+		Tags = HeavyItem,
+	}
+	
+	item HTFACMicroscope
+	{
+		DisplayName = HTFACMicroscope,
+		Icon = HTFACMicroscope,
+		WorldStaticModel = HTFAC.HTFACMicroscope,
+		Tooltip = Tooltip_HTFACMicroscope,
+		DisplayCategory = FirstAid,
+		Weight = 15.0,
+		Tags = HeavyItem,
+	}
+	
+	item HTFACCentrifuge
+	{
+		DisplayName = HTFACCentrifuge,
+		Icon = HTFACCentrifuge,
+		WorldStaticModel = HTFAC.HTFACCentrifuge,
+		Tooltip = Tooltip_HTFACCentrifuge,
+		DisplayCategory = FirstAid,
+		Weight = 15.0,
+		Tags = HeavyItem,
+	}
+	
+	/*============================= CHEMISTRY SETS =============================*/
+	
+	item HTFACChemistrySet1
+	{
+		DisplayName = HTFACChemistrySet,
+		Icon = HTFACChemistrySet1,
+		WorldStaticModel = HTFAC.HTFACChemistrySet1,
+		Tooltip = Tooltip_HTFACChemistrySet,
+		DisplayCategory = FirstAid,
+		Weight = 3.0,
+	}
+	
+	item HTFACChemistrySet2
+	{
+		DisplayName = HTFACChemistrySet,
+		Icon = HTFACChemistrySet2,
+		WorldStaticModel = HTFAC.HTFACChemistrySet2,
+		Tooltip = Tooltip_HTFACChemistrySet,
+		DisplayCategory = FirstAid,
+		Weight = 3.0,
+	}
+	
+	item HTFACChemistrySet3
+	{
+		DisplayName = HTFACChemistrySet,
+		Icon = HTFACChemistrySet3,
+		WorldStaticModel = HTFAC.HTFACChemistrySet3,
+		Tooltip = Tooltip_HTFACChemistrySet,
+		DisplayCategory = FirstAid,
+		Weight = 3.0,
+	}
+	
+	/*============================= ITEMS TO CRAFT WORKSTATION =============================*/
+	
+	item HTFACLabBalance
+	{
+		DisplayName = HTFACLabBalance,
+		Icon = HTFACLabBalance,
+		WorldStaticModel = HTFAC.HTFACLabBalance,
+		Tooltip = Tooltip_HTFACLabBalance,
+		DisplayCategory = FirstAid,
+		Weight = 5.0,
+	}
+	
+	item HTFACChemistryStand
+	{
+		DisplayName = HTFACChemistryStand,
+		Icon = HTFACChemistryStand,
+		WorldStaticModel = HTFAC.HTFACChemistryStand,
+		Tooltip = Tooltip_HTFACChemistryStand,
+		DisplayCategory = FirstAid,
+		Weight = 5.0,
+	}
+	
+	item HTFACBunsenBurner
+	{
+		DisplayName = HTFACBunsenBurner,
+		Icon = HTFACBunsenBurner,
+		WorldStaticModel = HTFAC.HTFACBunsenBurner,
+		Tooltip = Tooltip_HTFACBunsenBurner,
+		DisplayCategory = FirstAid,
+		Weight = 0.5,
+	}
+	
+	item HTFACBeakerEmpty
+	{
+		DisplayName = HTFACBeakerEmpty,
+		Icon = HTFACBeakerEmpty,
+		WorldStaticModel = HTFAC.HTFACBeakerEmpty,
+		Tooltip = Tooltip_HTFACBeakerEmpty,
+		DisplayCategory = FirstAid,
+		Weight = 0.3,
+	}
+	
+	item HTFACConicalFlaskEmpty
+	{
+		DisplayName = HTFACConicalFlaskEmpty,
+		Icon = HTFACConicalFlaskEmpty,
+		WorldStaticModel = HTFAC.HTFACConicalFlaskEmpty,
+		Tooltip = Tooltip_HTFACConicalFlaskEmpty,
+		DisplayCategory = FirstAid,
+		Weight = 0.3,
+	}
+	
+	item HTFACBoilingFlaskEmpty
+	{
+		DisplayName = HTFACBoilingFlaskEmpty,
+		Icon = HTFACBoilingFlaskEmpty,
+		WorldStaticModel = HTFAC.HTFACBoilingFlaskEmpty,
+		Tooltip = Tooltip_HTFACBoilingFlaskEmpty,
+		DisplayCategory = FirstAid,
+		Weight = 0.3,
+	}
+	
+	item HTFACGraduatedCylinderEmpty
+	{
+		DisplayName = HTFACGraduatedCylinderEmpty,
+		Icon = HTFACGraduatedCylinderEmpty,
+		WorldStaticModel = HTFAC.HTFACGraduatedCylinderEmpty,
+		Tooltip = Tooltip_HTFACGraduatedCylinderEmpty,
+		DisplayCategory = FirstAid,
+		Weight = 0.3,
+	}
+	
+	/*============================= TEST TUBES =============================*/
+	
+	item HTFACTestTubeEmpty
+	{
+		DisplayName = HTFACTestTubeEmpty,
+		Icon = HTFACTestTubeEmpty,
+		WorldStaticModel = HTFAC.HTFACTestTubeEmpty,
+		Tooltip = Tooltip_HTFACTestTubeEmpty,
+		DisplayCategory = FirstAid,
+		Weight = 0.05,
+	}
+	
+	item HTFACTestTubeBlood
+	{
+		DisplayName = HTFACTestTubeBlood,
+		Icon = HTFACTestTubeBlood,
+		WorldStaticModel = HTFAC.HTFACTestTubeBlood,
+		Tooltip = Tooltip_HTFACTestTubeBlood,
+		DisplayCategory = FirstAid,
+		Weight = 0.1,
+	}
+	
+	//Not Yet Implemented
+	
+//	item HTFACTestTubeBloodExperiment
+//	{
+//		DisplayName = HTFACTestTubeBloodExperiment,
+//		Icon = HTFACTestTubeBloodExperiment,
+//		WorldStaticModel = HTFAC.HTFACTestTubeBloodExperiment,
+//		Tooltip = Tooltip_HTFACTestTubeBloodExperiment,
+//		DisplayCategory = FirstAid,
+//		Weight = 0.1,
+//	}
+//	
+//	item HTFACTestTubeVirus
+//	{
+//		DisplayName = HTFACTestTubeVirus,
+//		Icon = HTFACTestTubeVirus,
+//		WorldStaticModel = HTFAC.HTFACTestTubeVirus,
+//		Tooltip = Tooltip_HTFACTestTubeVirus,
+//		DisplayCategory = FirstAid,
+//		Weight = 0.1,
+//	}
+	
+	/*============================= INJECTORS =============================*/
+	
+	item HTFACInjectorEmpty
+	{
+		DisplayName = HTFACInjectorEmpty,
+		Icon = HTFACInjectorEmpty,
+		WorldStaticModel = HTFAC.HTFACInjectorEmpty,
+		Tooltip = Tooltip_HTFACInjectorEmpty,
+		DisplayCategory = FirstAid,
+		Weight = 0.05,
+	}
+	
+	item HTFACInjectorUsed
+	{
+		DisplayName = HTFACInjectorUsed,
+		Icon = HTFACInjectorUsed,
+		WorldStaticModel = HTFAC.HTFACInjectorUsed,
+		Tooltip = Tooltip_HTFACInjectorUsed,
+		DisplayCategory = FirstAid,
+		Weight = 0.05,
+	}
+	
+	item HTFACInjectorSerumWeak
+	{
+		DisplayName = HTFACInjectorSerumWeak,
+		Icon = HTFACInjectorSerumWeak,
+		WorldStaticModel = HTFAC.HTFACInjectorSerumWeak,
+		Tooltip = Tooltip_HTFACInjectorSerumWeak,
+		DisplayCategory = FirstAid,
+		Weight = 0.2,
+	}
+
+	item HTFACInjectorSerumStrong
+	{
+		DisplayName = HTFACInjectorSerumStrong,
+		Icon = HTFACInjectorSerumStrong,
+		WorldStaticModel = HTFAC.HTFACInjectorSerumStrong,
+		Tooltip = Tooltip_HTFACInjectorSerumStrong,
+		DisplayCategory = FirstAid,
+		Weight = 0.2,
+	}
+
+	item HTFACInjectorSerumCure
+	{
+		DisplayName = HTFACInjectorSerumCure,
+		Icon = HTFACInjectorSerumCure,
+		WorldStaticModel = HTFAC.HTFACInjectorSerumCure,
+		Tooltip = Tooltip_HTFACInjectorSerumCure,
+		DisplayCategory = FirstAid,
+		Weight = 0.2,
+	}
+	
+	/*============================= PACKS =============================*/
+	
+	item HTFACPackInjectors
+	{
+		DisplayName = HTFACPackInjectors,
+		Icon = HTFACPackInjectors,
+		WorldStaticModel = HTFAC.HTFACPackInjectors,
+		Tooltip = Tooltip_HTFACPackInjectors,
+		DisplayCategory = FirstAid,
+		Weight = 0.5,
+	}
+	
+	item HTFACPackTestTubes
+	{
+		DisplayName = HTFACPackTestTubes,
+		Icon = HTFACPackTestTubes,
+		WorldStaticModel = HTFAC.HTFACPackTestTubes,
+		Tooltip = Tooltip_HTFACPackTestTubes,
+		DisplayCategory = FirstAid,
+		Weight = 2.0,
+	}
+	
+	/*============================= CONSUMABLE =============================*/
+	
+	item HTFACPackCottonSwabs
+	{
+		DisplayName = HTFACPackCottonSwabs,
+		Icon = HTFACPackCottonSwabs,
+		WorldStaticModel = HTFAC.HTFACPackCottonSwabs,
+		Tooltip = Tooltip_HTFACPackCottonSwabs,
+		DisplayCategory = FirstAid,
+		Weight = 0.5,
+		UseDelta = 0.1,
+		Type = Drainable,
+	}
+	
+	item HTFACRapidTest
+	{
+		DisplayName = HTFACRapidTest,
+		Icon = HTFACRapidTest,
+		WorldStaticModel = HTFAC.HTFACRapidTest,
+		Tooltip = Tooltip_HTFACRapidTest,
+		DisplayCategory = FirstAid,
+		Weight=1.0,
+	}
+	
+	item HTFACChemicals
+	{
+		DisplayName = HTFACChemicals,
+		Icon = HTFACChemicals,
+		WorldStaticModel = HTFAC.HTFACChemicals,
+		Tooltip = Tooltip_HTFACChemicals,
+		DisplayCategory = FirstAid,
+		Weight = 5.0,
+		UseDelta = 0.1,
+		Type = Drainable,
+	}
+	
+	/*============================= TEST RESULTS =============================*/
+	
+	item HTFACTestResultPositive
+	{
+		DisplayName = HTFACTestResultPositive,
+		Icon = HTFACTestResultPositive,
+		WorldStaticModel = HTFAC.HTFACTestResultPositive,
+		Tooltip = Tooltip_HTFACTestResultPositive,
+		DisplayCategory = FirstAid,
+		Weight = 0.05,
+	}
+	
+	item HTFACTestResultNegative
+	{
+		DisplayName = HTFACTestResultNegative,
+		Icon = HTFACTestResultNegative,
+		WorldStaticModel = HTFAC.HTFACTestResultNegative,
+		Tooltip = Tooltip_HTFACTestResultNegative,
+		DisplayCategory = FirstAid,
+		Weight = 0.05,
+	}
+	
+	/*============================= REPORTS =============================*/
+	
+	item HTFACReportMicroscopic
+	{
+		DisplayName = HTFACReportMicroscopic,
+		Icon = HTFACReportMicroscopic,
+		WorldStaticModel = HTFAC.HTFACReportMicroscopic,
+		Tooltip = Tooltip_HTFACReportMicroscopic,
+		DisplayCategory = FirstAid,
+		Weight = 0.05,
+	}
+	
+	item HTFACReportChemical
+	{
+		DisplayName = HTFACReportChemical,
+		Icon = HTFACReportChemical,
+		WorldStaticModel = HTFAC.HTFACReportChemical,
+		Tooltip = Tooltip_HTFACReportChemical,
+		DisplayCategory = FirstAid,
+		Weight = 0.05,
+	}
+	
+	item HTFACReportBlood
+	{
+		DisplayName = HTFACReportBlood,
+		Icon = HTFACReportBlood,
+		WorldStaticModel = HTFAC.HTFACReportBlood,
+		Tooltip = Tooltip_HTFACReportBlood,
+		DisplayCategory = FirstAid,
+		Weight = 0.05,
+	}
+	
+	item HTFACReportAutopsy
+	{
+		DisplayName = HTFACReportAutopsy,
+		Icon = HTFACReportAutopsy,
+		WorldStaticModel = HTFAC.HTFACReportAutopsy,
+		Tooltip = Tooltip_HTFACReportAutopsy,
+		DisplayCategory = FirstAid,
+		Weight = 0.05,
+	}
+	
+	/*============================= BREAKTHROUGH =============================*/
+	
+	item HTFACReportBreakthrough
+	{
+		DisplayName = HTFACReportBreakthrough,
+		Icon = HTFACReportBreakthrough,
+		WorldStaticModel = HTFAC.HTFACReportBreakthrough,
+		Tooltip = Tooltip_HTFACReportBreakthrough,
+		DisplayCategory = FirstAid,
+		Weight = 0.05,
+	}
+	
+	item HTFACReportBreakthroughWeak
+	{
+		DisplayName = HTFACReportBreakthroughWeak,
+		Icon = HTFACReportBreakthrough,
+		WorldStaticModel = HTFAC.HTFACReportBreakthroughWeak,
+		Tooltip = Tooltip_HTFACReportBreakthroughWeak,
+		DisplayCategory = FirstAid,
+		Type = Literature,
+		Weight = 0.05,
+		StaticModel = Book,
+		TeachedRecipes = Discover Weak Serum Formula, 
+	}
+	
+	item HTFACReportBreakthroughStrong
+	{
+		DisplayName = HTFACReportBreakthroughStrong,
+		Icon = HTFACReportBreakthrough,
+		WorldStaticModel = HTFAC.HTFACReportBreakthroughStrong,
+		Tooltip = Tooltip_HTFACReportBreakthroughStrong,
+		DisplayCategory = FirstAid,
+		Type = Literature,
+		Weight = 0.05,
+		StaticModel = Book,
+		TeachedRecipes = Discover Strong Serum Formula, 
+	}
+	
+	item HTFACReportBreakthroughCure
+	{
+		DisplayName = HTFACReportBreakthroughCure,
+		Icon = HTFACReportBreakthrough,
+		WorldStaticModel = HTFAC.HTFACReportBreakthroughCure,
+		Tooltip = Tooltip_HTFACReportBreakthroughCure,
+		DisplayCategory = FirstAid,
+		Type = Literature,
+		Weight = 0.05,
+		StaticModel = Book,
+		TeachedRecipes = Discover The Cure, 
+	}
+	
+	/*============================= FORMULAS =============================*/
+	
+	item HTFACFormulaWeak
+	{
+		DisplayName = HTFACFormulaWeak,
+		Icon = HTFACFormulaWeak,
+		WorldStaticModel = HTFAC.HTFACFormulaWeak,
+		Tooltip = Tooltip_HTFACFormulaWeak,
+		DisplayCategory = FirstAid,
+		Type = Literature,
+		Weight = 0.3,
+		StaticModel = book,
+		ReplaceOnUse = HTFAC.HTFACFormulaWeak,
+		TeachedRecipes = Create Weak Serum, 
+	}
+	
+	item HTFACFormulaStrong
+	{
+		DisplayName = HTFACFormulaStrong,
+		Icon = HTFACFormulaStrong,
+		WorldStaticModel = HTFAC.HTFACFormulaStrong,
+		Tooltip = Tooltip_HTFACFormulaStrong,
+		DisplayCategory = FirstAid,
+		Type = Literature,
+		Weight = 0.3,
+		StaticModel = Book,
+		ReplaceOnUse = HTFAC.HTFACFormulaStrong,
+		TeachedRecipes = Create Strong Serum, 
+	}
+	
+	item HTFACFormulaCure
+	{
+		DisplayName = HTFACFormulaCure,
+		Icon = HTFACFormulaCure,
+		WorldStaticModel = HTFAC.HTFACFormulaCure,
+		Tooltip = Tooltip_HTFACFormulaCure,
+		DisplayCategory = FirstAid,
+		Type = Literature,
+		Weight = 0.3,
+		StaticModel = Book,
+		ReplaceOnUse = HTFAC.HTFACFormulaCure,
+		TeachedRecipes = Create The Cure;Write Article for Publication, 
+	}
+	
+	item HTFACFormulaArticle
+	{
+		DisplayName = HTFACFormulaArticle,
+		Icon = HTFACFormulaArticle,
+		WorldStaticModel = HTFAC.HTFACFormulaArticle,
+		Tooltip = Tooltip_HTFACFormulaArticle,
+		DisplayCategory = FirstAid,
+		Type = Literature,
+		Weight = 0.3,
+		StaticModel = Book,
+		ReplaceOnUse = HTFAC.HTFACFormulaArticle,
+		TeachedRecipes = Copy Weak Serum Formula;Copy Strong Serum Formula;Copy Cure Formula, 
+	}
+	
+	/*============================= LITERATURE =============================*/
+	
+	item HTFACLiteratureChemistry101
+	{
+		DisplayName = HTFACLiteratureChemistry101,
+		Icon = HTFACLiteratureChemistry101,
+		WorldStaticModel = HTFAC.HTFACLiteratureChemistry101,
+		Tooltip = Tooltip_HTFACLiteratureChemistry101,
+		DisplayCategory = SkillBook,
+		Type = Literature,
+		Weight = 0.3,
+		StaticModel = Book,
+		ReplaceOnUse = HTFAC.HTFACLiteratureChemistry101,
+		TeachedRecipes = Build Chemical Workstation;Perform Chemical Analysis,
+	}
+	
+	item HTFACLiteratureMicrobiology
+	{
+		DisplayName = HTFACLiteratureMicrobiology,
+		Icon = HTFACLiteratureMicrobiology,
+		WorldStaticModel = HTFAC.HTFACLiteratureMicrobiology,
+		Tooltip = Tooltip_HTFACLiteratureMicrobiology,
+		DisplayCategory = SkillBook,
+		Type = Literature,
+		Weight = 0.3,
+		StaticModel = Magazine,
+		ReplaceOnUse = HTFAC.HTFACLiteratureMicrobiology,
+		TeachedRecipes = Perform Microscopic Analysis;Create Testing Kit,
+	}
+	
+	item HTFACLiteratureHematology
+	{
+		DisplayName = HTFACLiteratureHematology,
+		Icon = HTFACLiteratureHematology,
+		WorldStaticModel = HTFAC.HTFACLiteratureHematology,
+		Tooltip = Tooltip_HTFACLiteratureHematology,
+		DisplayCategory = SkillBook,
+		Type = Literature,
+		Weight = 0.3,
+		StaticModel = Magazine,
+		ReplaceOnUse = HTFAC.HTFACLiteratureHematology,
+		TeachedRecipes = Perform Blood Analysis,
+	}
+	
+	item HTFACLiteratureCadavers
+	{
+		DisplayName = HTFACLiteratureCadavers,
+		Icon = HTFACLiteratureCadavers,
+		WorldStaticModel = HTFAC.HTFACLiteratureCadavers,
+		Tooltip = Tooltip_HTFACLiteratureCadavers,
+		DisplayCategory = SkillBook,
+		Type = Literature,
+		Weight = 0.3,
+		StaticModel = Book,
+		ReplaceOnUse = HTFAC.HTFACLiteratureCadavers,
+		TeachedRecipes = Perform Autopsy,
+	}
+	
+	/*============================= PATIENT/RESEARCH FILES =============================*/
+	
+	item HTFACFilePatient
+	{
+		DisplayName = HTFACFilePatient,
+		Icon = HTFACFilePatient,
+		WorldStaticModel = HTFAC.HTFACFilePatient,
+		Tooltip = Tooltip_HTFACFilePatient,
+		DisplayCategory = FirstAid,
+		Weight = 0.15,
+	}
+	
+	item HTFACFileResearch
+	{
+		DisplayName = HTFACFileResearch,
+		Icon = HTFACFileResearch,
+		WorldStaticModel = HTFAC.HTFACFileResearch,
+		Tooltip = Tooltip_HTFACFileResearch,
+		DisplayCategory = FirstAid,
+		Weight = 0.15,
+	}
+	
+	/*============================= LORE ITEMS =============================*/	
+	//Not Yet Implemented
+
+}

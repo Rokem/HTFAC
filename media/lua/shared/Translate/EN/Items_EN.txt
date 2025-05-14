@@ -1,0 +1,60 @@
+Items_EN = {
+	DisplayName_HTFACChemicalWorkstation="Chemical Workstation",
+	DisplayName_HTFACMicroscope="Microscope",
+	DisplayName_HTFACCentrifuge="Centrifuge",
+	
+	DisplayName_HTFACChemistrySet="Chemistry Set",
+	
+	DisplayName_HTFACLabBalance="Lab Balance",
+	DisplayName_HTFACChemistryStand="Chemistry Stand",
+	DisplayName_HTFACBunsenBurner="Bunsen Burner",
+	DisplayName_HTFACBeakerEmpty="Lab Beaker",
+	DisplayName_HTFACConicalFlaskEmpty="Conical Flask",
+	DisplayName_HTFACBoilingFlaskEmpty="Boiling Flask",
+	DisplayName_HTFACGraduatedCylinderEmpty="Graduated Cylinder",
+	
+	DisplayName_HTFACTestTubeEmpty="Test Tube",
+	DisplayName_HTFACTestTubeBlood="Blood Sample",
+	DisplayName_HTFACTestTubeBloodExperiment="Test Subject Blood Sample",
+	DisplayName_HTFACTestTubeVirus="Pure Viral Sample",
+	
+	DisplayName_HTFACInjectorEmpty="Empty Injector",
+	DisplayName_HTFACInjectorUsed="Used Injector",
+	DisplayName_HTFACInjectorSerumWeak="Weak Serum",
+	DisplayName_HTFACInjectorSerumStrong="Strong Serum",
+	DisplayName_HTFACInjectorSerumCure="The Cure",
+	
+	DisplayName_HTFACPackInjectors="Pack of Injectors",
+	DisplayName_HTFACPackTestTubes="Pack of Test Tubes",
+	
+	DisplayName_HTFACPackCottonSwabs="Cotton Swab Pack",
+	DisplayName_HTFACRapidTest="Rapid Test Kit",
+	DisplayName_HTFACChemicals="Chemicals",
+	
+	DisplayName_HTFACTestResultPositive="Positive Test Result",
+	DisplayName_HTFACTestResultNegative="Negative Test Result",
+	
+	DisplayName_HTFACReportMicroscopic ="Microscopic Analysis",
+	DisplayName_HTFACReportChemical ="Chemical Analysis",
+	DisplayName_HTFACReportBlood ="Blood Analysis",
+	DisplayName_HTFACReportAutopsy="Autopsy Report",
+	
+	DisplayName_HTFACReportBreakthrough="Breakthrough Data",
+	DisplayName_HTFACReportBreakthroughWeak="Weak Serum Breakthrough",
+	DisplayName_HTFACReportBreakthroughStrong="Strong Serum Breakthrough",
+	DisplayName_HTFACReportBreakthroughCure="The Cure Breakthrough",
+	
+	DisplayName_HTFACFormulaWeak="Weak Serum Formula",
+	DisplayName_HTFACFormulaStrong="Strong Serum Formula",
+	DisplayName_HTFACFormulaCure="The Cure Formula",
+	DisplayName_HTFACFormulaArticle="Journal Article Submission",
+		
+	DisplayName_HTFACLiteratureChemistry101="Basics of Homebrewing Chemistry",
+	DisplayName_HTFACLiteratureMicrobiology="Journal of Clinical Microbiology",
+	DisplayName_HTFACLiteratureHematology="American Journal of Hematology",
+	DisplayName_HTFACLiteratureCadavers="Atlas of Adult Autopsy",
+	
+	DisplayName_HTFACFilePatient="Patient Record",
+	DisplayName_HTFACFileResearch="Research File",
+	
+}

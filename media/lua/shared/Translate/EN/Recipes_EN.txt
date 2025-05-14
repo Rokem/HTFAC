@@ -1,0 +1,35 @@
+Recipes_EN = {
+	Recipe_Test_For_Infection="Test For Infection",
+	Recipe_Inject_Yourself="Inject Yourself",
+	
+	Recipe_Build_Chemical_Workstation="Build Chemical Workstation",
+	Recipe_Create_Testing_Kit="Create Testing Kit",
+	Recipe_Get_Sheets_of_Paper="Get Sheets of Paper",
+	
+	Recipe_Open_Chemistry_Set="Open Chemistry Set",
+	Recipe_Examine_Patient_Record="Examine Patient Record",
+	Recipe_Examine_Research_File="Examine Research File",
+	
+	Recipe_Perform_Microscopic_Analysis="Perform Microscopic Analysis",
+	Recipe_Perform_Chemical_Analysis="Perform Chemical Analysis",
+	Recipe_Perform_Blood_Analysis="Perform Blood Analysis",
+	Recipe_Perform_Autopsy="Perform Autopsy",
+	
+	Recipe_Discover_Weak_Serum_Formula="Discover Weak Serum Formula",
+	Recipe_Discover_Strong_Serum_Formula="Discover Strong Serum Formula",
+	Recipe_Discover_The_Cure="Discover The Cure",
+	Recipe_Write_Article_for_Publication="Write Article for Publication",
+	
+	Recipe_Copy_Weak_Serum_Formula="Copy Weak Serum Formula",
+	Recipe_Copy_Strong_Serum_Formula="Copy Strong Serum Formula",
+	Recipe_Copy_Cure_Formula="Copy Cure Formula",
+	
+	Recipe_Create_Weak_Serum="Create Weak Serum",
+	Recipe_Create_Strong_Serum="Create Strong Serum",
+	Recipe_Create_The_Cure="Create The Cure",
+	
+	Recipe_Unpack_Empty_Injectors="Unpack Empty Injectors",
+	Recipe_Pack_Empty_Injectors="Pack Empty Injectors",
+	Recipe_Unpack_Test_Tubes="Unpack Test Tubes",
+	Recipe_Pack_Test_Tubes="Pack Test Tubes",
+}
