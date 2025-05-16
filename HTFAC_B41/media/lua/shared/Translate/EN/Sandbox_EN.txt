@@ -1,0 +1,18 @@
+Sandbox_EN = {
+    Sandbox_HTFAC = "HTFAC",
+    
+    Sandbox_HTFAC_OptionName = "My Option Name",
+    Sandbox_HTFAC_OptionName_tooltip = "Extra details about my option.",
+
+    Sandbox_HTFAC_OptionName = "My Option Name",
+    Sandbox_HTFAC_OptionName_tooltip = "Extra details about my option.",
+
+    Sandbox_HTFAC_OptionName = "My Option Name",
+    Sandbox_HTFAC_OptionName_tooltip = "Extra details about my option.",
+    
+    Sandbox_HTFAC_OptionName = "My Option Name",
+    Sandbox_HTFAC_OptionName_tooltip = "Extra details about my option.",
+
+    Sandbox_HTFAC_OptionName = "My Option Name",
+    Sandbox_HTFAC_OptionName_tooltip = "Extra details about my option.",
+}

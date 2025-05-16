@@ -13,10 +13,10 @@ local function HTFACAddXP(player,amountXP)
 end
 
 --Reduce durability of item such as pen/pencil. CURRENTLY NOT USED.
-local function HTFACReduceDurability(items, player)
-	local tool = items:get(i)
-	tool:setCondition(tool:getCondition() - 0.1)
-end
+-- local function HTFACReduceDurability(items, player)
+-- 	local tool = items:get(i)
+-- 	tool:setCondition(tool:getCondition() - 0.1)
+-- end
 
 --[---------------------------------- RESEARCH ANALYSIS ----------------------------------]--
 
@@ -27,13 +27,13 @@ local function HTFACBreakthroughChance(player)
 	local learnedWeakDiscovery = false
 	local learnedStrongDiscovery = false
 	local learnedCureDiscovery = false
-	
+
 	--Determine if the player has learned any discovery recipes.
 	local knownRecipes = player:getKnownRecipes()
 	if knownRecipes:contains("Discover Weak Serum Formula") then learnedWeakDiscovery = true end
 	if knownRecipes:contains("Discover Strong Serum Formula") then learnedStrongDiscovery = true end
 	if knownRecipes:contains("Discover The Cure") then learnedCureDiscovery = true end
-	
+
 	--Determine if the player has a breakthrough.
 	if breakthrough <= 0 * playerFirstAidSkill then
 		HTFACAddXP(player, 50)
@@ -85,11 +85,11 @@ end
 --Test for Zombie Infection.
 function HTFACTestForInfection(items, result, player)
 	local infectionProgress = getInfectionProgress(player)
-	
+
 	--DEBUG COMMAND:
 	--print("My infection progress: " .. math.ceil(infectionProgress * 100.0 - 1) .."%")
 	--player:Say("My infection progress: " .. math.ceil(infectionProgress * 100.0 - 1) .."%")
-	
+
 	--Check infection progress.
 	if infectionProgress <= 0 then
 		--Add negative test result to player inventory.
@@ -105,7 +105,7 @@ function HTFACTestForInfection(items, result, player)
 		elseif infectionProgress <= 0.6 then
 			player:Say("The virus is in the beginning stage of mutation.")
 		elseif infectionProgress <= 0.8 then
-			player:Say("The virus is in the middle stage of mutation.")	
+			player:Say("The virus is in the middle stage of mutation.")
 		else
 			player:Say("The virus is in the final stage of mutation.")
 		end
@@ -117,11 +117,11 @@ end
 --Determines the outcome of the injection.
 local function HTFACApplySerum(minLevel, maxLevel, effectiveness, player)
 	local bodyDamage = player:getBodyDamage()
-	
+
 	--Check if the player is infected (and do nothing if infection is above serum's maxLevel).
 	if bodyDamage:isInfected() then
 		local infectionProgress = getInfectionProgress(player)
-		
+
 		--Check if the serum is The Cure.
 		if minLevel == 0 then
 			bodyDamage:setInfected(false)
@@ -133,7 +133,7 @@ local function HTFACApplySerum(minLevel, maxLevel, effectiveness, player)
 				local bodyPart = bodyParts:get(i)
 				bodyPart:SetInfected(false)
 			end
-			
+
 		--Reduce the infection if infection is within the serum's range.
 		elseif infectionProgress > minLevel and infectionProgress < maxLevel then
 			if infectionProgress - effectiveness <  minLevel then
@@ -144,7 +144,7 @@ local function HTFACApplySerum(minLevel, maxLevel, effectiveness, player)
 				bodyDamage:setInfectionTime(player:getHoursSurvived() - (infectionProgress - effectiveness) * bodyDamage:getInfectionMortalityDuration())
 			end
 		end
-		
+
 	-- Infect the player if they are not infected.
 	else
 		bodyDamage:setInfected(true)
@@ -163,13 +163,13 @@ function HTFACInjectYourself(items, result, player)
 	local strongMinLevel = 0.01
 	local strongMaxLevel = 0.85
 	local strongEffectiveness = 0.5
-	
+
 	local cureMinLevel = 0
 	local cureMaxLevel = 0.95
 	local cureEffectiveness = 1
 
 	--Determine which serum is being injected and apply the effect.
-	for i=items:size()-1, 0, -1  do
+	for i=items:size()-1, 0, -1 do
 		if string.find(items:get(i):getType(),"Weak") then
 			HTFACApplySerum(weakMinLevel, weakMaxLevel, weakEffectiveness, player)
 			return

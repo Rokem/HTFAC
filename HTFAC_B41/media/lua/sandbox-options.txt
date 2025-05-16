@@ -1,0 +1,46 @@
+VERSION = 1
+
+option HTFAC.OptionNameBoolean
+{
+    type = boolean,
+    default = true/false,
+    page = HTFAC,
+    translation = HTFAC_OptionName,
+}
+
+option HTFAC.OptionNameInteger
+{
+    type = integer,
+    min = -5,
+    max = 10,
+    default = 5,
+    page = HTFAC,
+    translation = HTFAC_OptionName,
+}
+
+option HTFAC.OptionNameDouble
+{
+    type = double,
+    min = -9.5,
+    max = 12.34,
+    default = 1,
+    page = HTFAC,
+    translation = HTFAC_OptionName,
+}
+
+option HTFAC.OptionNameString
+{
+    type = string,
+    default = MyString,
+    page = HTFAC,
+    translation = HTFAC_OptionName,
+}
+
+option HTFAC.OptionNameEnum
+{
+    type = enum,
+    numValues = 3,
+    default = 1,
+    page = HTFAC,
+    translation = HTFAC_OptionName,
+}

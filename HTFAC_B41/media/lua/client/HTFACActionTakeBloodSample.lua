@@ -82,7 +82,7 @@ function ActionTakeBloodSample:perform()
     ISBaseTimedAction.perform(self)
 end
 
-function ActionTakeBloodSample:new (character, corpse, time)
+function ActionTakeBloodSample:new(character, corpse, time)
     local o = {}
     setmetatable(o, self)
     self.__index = self

@@ -10,15 +10,15 @@ local ZombRand = ZombRand --Used to randomly generate numbers.
 
 --Item tables. The tables' rarity is defined using the itemRarity table.
 --All items within the same item table have an equal probability of being selected.
-local junk = {} 
-local common = {}
-local uncommon = {}
-local rare = {}
-local veryrare = {}
+local junk		= {}
+local common	= {}
+local uncommon	= {}
+local rare		= {}
+local veryrare	= {}
 
-local itemTier = {} --Determines the tier of an item.
-local itemRarity = {} --Determines the likelyhood of this tier being selected. Seems to work best when the totalRarity = 1000+
-local multiSpawn = {} --Determines if a tier can spawn items more than once.
+local itemTier		= {} --Determines the tier of an item.
+local itemRarity	= {} --Determines the likelyhood of this tier being selected. Seems to work best when the totalRarity = 1000+
+local multiSpawn	= {} --Determines if a tier can spawn items more than once.
 
 --[---------------------------------- RESET TABLES ----------------------------------]--
 
@@ -45,7 +45,7 @@ local function HTFACProbabilityDistributor(itemTier, itemRarity)
 		totalRarity = totalRarity + r
 	end
 	
-	randomV = ZombRand(0, totalRarity) --Determines which tier item will spawn.
+	local randomV = ZombRand(0, totalRarity) --Determines which tier item will spawn.
 	local runningTotal = 0
 	local itemTierIndex = 0
 	
@@ -75,8 +75,8 @@ local function HTFACSpawnOpenedItems(player, itemTier, ItemRarity, multiSpawn, n
 		local itemList = itemArray[2]
 		
 		--Determine which item from the list is spawned.
-		itemIndex = ZombRand(1, #itemList + 1)
-		item = itemList[itemIndex]
+		local itemIndex = ZombRand(1, #itemList + 1)
+		local item = itemList[itemIndex]
 		
 		--DEBUG COMMAND:
 		--print("#itemList = " .. #itemList + 1)
@@ -135,16 +135,16 @@ function HTFACOpenChemistrySet(items, result, player)
 	}
 	
 	--Defines the item tiers, their corresponding rarity, and whether or not a tier can spawn multiple items.
-	itemTier		= {junk,	common,	uncommon,	rare,	veryrare	}
-	itemRarity	= {250,		500,			250,				25,		1				}
-	multiSpawn = {true,	true,		false,			false,	false		}
+	itemTier	= {junk,	common,		uncommon,	rare,	veryrare}
+	itemRarity	= {250,		500,		250,		25,		1		}
+	multiSpawn  = {true,	true,		false,		false,	false	}
 	
 	--Determine number of items to spawn.
 	local numItems = ZombRand(2,4)
 	print("numItems = " .. numItems)
 	
 	--Spawn the item(s).
-	HTFACSpawnOpenedItems(player, itemTier, ItemRarity, multiSpawn, numItems)
+	HTFACSpawnOpenedItems(player, itemTier, itemRarity, multiSpawn, numItems)
 	
 	return
 end
@@ -169,16 +169,16 @@ function HTFACOpenFilePatient(items, result, player)
 	}
 	
 	--Defines the item tiers, their corresponding rarity, and whether or not a tier can spawn multiple items.
-	itemTier		= {junk,	common,	uncommon	}
-	itemRarity	= {200,		750,			50				}
-	multiSpawn = {true,	true,		false			}
+	itemTier	= {junk,	common,		uncommon}
+	itemRarity	= {200,		750,		50		}
+	multiSpawn	= {true,	true,		false	}
 	
 	--Determine number of items to spawn.
 	local numItems = ZombRand(1,4)
 	print("numItems = " .. numItems)
 	
 	--Spawn the items.
-	HTFACSpawnOpenedItems(player, itemTier, ItemRarity, multiSpawn, numItems)
+	HTFACSpawnOpenedItems(player, itemTier, itemRarity, multiSpawn, numItems)
 	
 	return
 end
@@ -206,16 +206,16 @@ function HTFACOpenFileResearch(items, result, player)
 	}
 	
 	--Defines the item tiers, their corresponding rarity, and whether or not a tier can spawn multiple items.
-	itemTier		= {common,	uncommon,	rare,	veryrare	}
-	itemRarity	= {700,			200,				100,		1				}
-	multiSpawn = {true,		false,			false,	false		}
+	itemTier	= {common,	uncommon,	rare,	veryrare}
+	itemRarity	= {700,		200,		100,	1		}
+	multiSpawn  = {true,	false,		false,	false	}
 	
 	--Determine number of items to spawn.
 	local numItems = ZombRand(1,4)
 	print("numItems = " .. numItems)
 	
 	--Spawn the items.
-	HTFACSpawnOpenedItems(player, itemTier, ItemRarity, multiSpawn, numItems)
+	HTFACSpawnOpenedItems(player, itemTier, itemRarity, multiSpawn, numItems)
 	
 	return
 end

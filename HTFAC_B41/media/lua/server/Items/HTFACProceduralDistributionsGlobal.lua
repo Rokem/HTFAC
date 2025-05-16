@@ -137,7 +137,7 @@ table.insert(ProceduralDistributions.list["ClassroomShelves"].items, "HTFAC.HTFA
 table.insert(ProceduralDistributions.list["ClassroomShelves"].items, 1)
 
 
---[****************************** CONSUMEABLE ******************************]--
+--[****************************** CONSUMEABLES ******************************]--
 
 --[------------------- HTFACPackCottonSwabs -------------------]--
 table.insert(ProceduralDistributions.list["MedicalClinicTools"].items, "HTFAC.HTFACPackCottonSwabs")
